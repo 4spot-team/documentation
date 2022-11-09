@@ -1,2 +1,0 @@
-STATE DIAGRAMS TO MAKE
-- Accesso => (Registrazione, Login)

@@ -1,0 +1,110 @@
+context User
+    inv : (self.preferences -> size()) >= 3
+    inv : self.followers -> excludes(self)
+    inv : self.following -> excludes(self)
+
+context User::follow(user)
+    pre: self.following -> excludes(user)
+    post: self.following -> includes(user)
+
+context User::unfollow(user)
+    pre: self.following -> includes(user)
+    post: self.following -> excludes(user)
+
+context Supervisor::banUser(user, definitive, duration)
+    pre : (user.BlockState.expired == NULL) || 
+        (user.BlockState.expired < currentDate())
+    pre : user.BlockState.definitive = False
+
+    post : user.BlockState.definitive = definitive
+    post : user.BlockState.blockingDate = currentDate()
+    post : user.BlockState.expiration = currentDate() + duration
+
+context Supervisor::unbanUser(user)
+    pre : (user.BlockState.expiration != NULL) && 
+        (user.BlockState.expiration >= currentDate())
+    pre : user.BlockState.definitive = False
+    
+    post : user.BlockState.definitive = False
+    post : user.BlockState.blockingDate = NULL
+    post : user.BlockState.expiration = NULL
+
+context BlockState
+    inv : (self.blockingDate == NULL) || (self.blockingDate <= currentDate())
+    inv : (self.expiration == NULL) || (self.expiration >= self.blockingDate)
+
+context Event
+    inv : self.types -> notEmpty()
+    inv : self.price.value >= 0.0
+    inv : (self.participants -> size()) <= self.numOfSpots
+    inv : self.pathsToHTML -> notEmpty()
+
+context Event::generateTicket(personalUser)
+    pre : self.numOfSpots > (self.participants -> size())
+    pre : self.participants -> excludes(personalUser)
+
+    post : self.participants -> includes(personalUser)
+    post : self.tickets -> notEmpty()
+    post : personalUser.tickets -> notEmpty()
+
+context Event::checkQRCode()
+    pre : self.hasQRCode = True
+    pre : self.participants -> notEmpty()
+
+context Event::checkTicket(ticketID)
+    pre : self.tickets -> notEmpty()
+
+context Chat
+    inv : self.users -> size() >= 1
+
+context Chat::addMessage(requester, message)
+    post : self.messages -> notEmpty()
+    post : self.messages -> includes(message)
+
+context Chat::blockUser(requester, target)
+    pre : requester.blockedList -> excludes(target)
+    post : requester.blockedList -> includes(target)
+
+context MessagingGroup::addUser(user)
+    pre : self.users -> excludes(user)
+    post : self.users -> includes(user)
+
+context Message:
+    inv : self.date <= currentDate()
+
+context JoinRequest
+    inv : self.date <= currentDate()
+    inv : self.user != self.event.organizer
+
+context JoinRequest::accept()
+    pre : self.accepted = False
+    post : self.accepted = True
+
+context Invitation
+    inv : self.user != self.event.organizer
+    inv : self.date <= currentDate()
+
+context Invitation::accept()
+    pre : self.accepted = False
+    post : self.accepted = True
+
+context Notification
+    inv : self.date <= currentDate()
+
+context SuperNotification
+    inv : self.date <= currentDate()
+
+context Comment
+    inv : self.date <= currentDate()
+
+context CookiesManagementSystem::generateCookie(stakeholder)
+    post : self.generatedCookies -> notEmpty()
+    post : self.generatedCookies -> includes(Pair<stakeholder, cookie>)
+
+context SigninPage::registerUser(username, email, password, ...)
+    pre : Register.users.usernames -> excludes(username)
+    pre : Register.users.emails -> excludes(email)
+
+context Server::waitConnection(port)
+    pre : self.availablePorts[port] = True
+    post : self.availablePorts[port] = True

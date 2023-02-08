@@ -108,3 +108,26 @@ context SigninPage::registerUser(username, email, password, ...)
 context Server::waitConnection(port)
     pre : self.availablePorts[port] = True
     post : self.availablePorts[port] = True
+
+context FilteringParameters
+    inv : self.minPrice <= self.maxPrice
+    inv : self.minDate <= self.maxDate
+
+context UserPage::follow()
+    pre : self.client != self.user
+    pre : self.client.following -> excludes(user)
+    pre : self.user.followers -> excludes(client)
+    post : self.client.following -> includes(user)
+    post : self.user.followers -> includes(client)
+
+context UserPage::unfollow()
+    pre : self.client != self.user
+    pre : self.client.following -> includes(user)
+    pre : self.user.followers -> includes(client)
+    post : self.client.following -> excludes(user)
+    post : self.user.followers -> excludes(client)
+
+context EventCreationPage::createEvent()
+    pre : self.client.publishedEvents -> excludes(newEvent)
+    post : self.client.publishedEvents -> includes(newEvent)
+

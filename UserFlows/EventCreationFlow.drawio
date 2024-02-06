@@ -1,0 +1,60 @@
+<mxfile host="app.diagrams.net" modified="2024-02-06T14:13:32.657Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" etag="H0gdvTE05d9pzpL4glm8" version="23.1.1" type="device">
+  <diagram name="Page-1" id="kOEPrXLJ7RNu3foBPVMS">
+    <mxGraphModel dx="1187" dy="1928" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="xPo3s3iiTBHzX5Kv2DWH-1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="xPo3s3iiTBHzX5Kv2DWH-2" target="xPo3s3iiTBHzX5Kv2DWH-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xPo3s3iiTBHzX5Kv2DWH-2" value="Inizio&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#60a917;strokeColor=#2D7600;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="43.75" y="-886" width="52.5" height="52.5" as="geometry" />
+        </mxCell>
+        <mxCell id="xPo3s3iiTBHzX5Kv2DWH-3" value="Event Creation Page" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="40" y="-930" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="xPo3s3iiTBHzX5Kv2DWH-30" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="xPo3s3iiTBHzX5Kv2DWH-5" target="xPo3s3iiTBHzX5Kv2DWH-29">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xPo3s3iiTBHzX5Kv2DWH-5" value="Event Creation Page" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="140.75" y="-884.75" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="xPo3s3iiTBHzX5Kv2DWH-32" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="xPo3s3iiTBHzX5Kv2DWH-29" target="xPo3s3iiTBHzX5Kv2DWH-31">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xPo3s3iiTBHzX5Kv2DWH-29" value="Fill del Form e click su Avanti" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="300" y="-884.75" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="xPo3s3iiTBHzX5Kv2DWH-34" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="xPo3s3iiTBHzX5Kv2DWH-31" target="xPo3s3iiTBHzX5Kv2DWH-33">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xPo3s3iiTBHzX5Kv2DWH-31" value="Anteprima Evento creato" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="460" y="-885" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="xPo3s3iiTBHzX5Kv2DWH-36" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="xPo3s3iiTBHzX5Kv2DWH-33" target="xPo3s3iiTBHzX5Kv2DWH-35">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="680" y="-800" />
+              <mxPoint x="191" y="-800" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xPo3s3iiTBHzX5Kv2DWH-33" value="Click su Crea Evento" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="630" y="-886" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="xPo3s3iiTBHzX5Kv2DWH-38" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="xPo3s3iiTBHzX5Kv2DWH-35" target="xPo3s3iiTBHzX5Kv2DWH-37">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xPo3s3iiTBHzX5Kv2DWH-35" value="Evento creato con successo" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="140.75" y="-760" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="xPo3s3iiTBHzX5Kv2DWH-37" value="Arrivo" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#e51400;strokeColor=#B20000;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="323.75" y="-761.25" width="52.5" height="52.5" as="geometry" />
+        </mxCell>
+        <mxCell id="xPo3s3iiTBHzX5Kv2DWH-39" value="Profile Page" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="376.25" y="-750" width="60" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
